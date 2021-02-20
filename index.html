@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Bacata - Savings Leads Profits</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/images/icon-logo.png">
+</head>
+
+<body>
+  <app-root></app-root>
+
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyCdXA_VI7v0ouTprOYxcWr5ixYIGMDVCcY",
+      authDomain: "my-project-599-602f9.firebaseapp.com",
+      projectId: "my-project-599-602f9",
+      storageBucket: "my-project-599-602f9.appspot.com",
+      messagingSenderId: "518441935907",
+      appId: "1:518441935907:web:269c98fe2b6791cb11fd96",
+      measurementId: "G-VHC8FM5BN1"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    //=================Login With google===========================
+    function sendToGoogleLogin() {
+      var provider = new firebase.auth.GoogleAuthProvider();
+
+      firebase.auth().signInWithPopup(provider).then(function (response) {
+        var userobj = response.user;
+        var token = userobj.xa;
+        var provider = "google";
+        var email = userobj.email;
+        if (token != null && token != undefined && token != "") {
+          sendDatatoServerPhp(email, provider, token, userobj.displayName);
+        }
+
+        console.log(response);
+      })
+        .catch(function (error) {
+          console.log(error);
+        })
+    }
+    //=======================End Login With Google=================
+
+    //=================Login With facebook===========================
+    function sendToFacebookLogin() {
+      var provider = new firebase.auth.FacebookAuthProvider();
+
+      firebase.auth().signInWithPopup(provider).then(function (response) {
+        console.log("facebook login response isss", response);
+        var userobj = response.additionalUserInfo.profile;
+        var imgUrl = response.user.photoURL;
+        console.log(imgUrl, "image url isssssss");
+        var token = response.user.xa;
+        var provider = "facebook";
+        var email = userobj.email;
+        sessionStorage.setItem('userid', userobj.id);
+        localStorage.setItem('token', token);
+        sessionStorage.setItem('email', userobj.email);
+        sessionStorage.setItem('username', userobj.name);
+        sessionStorage.setItem('provider', provider);
+        sessionStorage.setItem('imgUrl', imgUrl);
+        sendDatatoServerNodejs(userobj.email, provider, token, userobj.name, imgUrl);
+        // if (token != null && token != undefined && token != "") {
+        //   sendDatatoServerNodejs(email, provider, token, userobj.displayName);
+        // }
+      }).catch(function (error) {
+        console.log(error);
+      })
+    }
+    //=======================End Login With Facebook=================
+
+
+    //===================Saving Login Details in My Server Using AJAX================
+    function sendDatatoServerNodejs(email, provider, token, username, profileUrl) {
+
+      var xhr = new XMLHttpRequest();
+      //xhr.withCredentials = true;
+
+      const momentDate = new Date().getFullYear() + '-' + (Number(new Date().getMonth()) + 1).toString() + '-' + new Date().getDate() + ` ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`;
+
+      xhr.addEventListener("readystatechange", function () {
+        console.log(this.responseText);
+        console.log("Login successful.");
+        // <app-dashboard></app-dashboard>
+        sessionStorage.setItem('password', '1234');
+        sessionStorage.setItem('phonenumber', '9876543210');
+        sessionStorage.setItem('role', 'user');
+        sessionStorage.setItem('status', '1');
+        sessionStorage.setItem('points', '200');
+        sessionStorage.setItem('created_at', momentDate);
+        sessionStorage.setItem('updated_at', momentDate);
+      });
+
+      xhr.open("POST", "http://localhost:3333/api/add_new_user?username=" + username + "&email=" + email + "&provider=" + provider + "&profileUrl=" + profileUrl + "&token=" + token);
+      xhr.send();
+    }
+    //===========================End Saving Details in My Server=======================
+
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="runtime-es2015.js" type="module"></script><script src="runtime-es5.js" nomodule defer></script><script src="polyfills-es5.js" nomodule defer></script><script src="polyfills-es2015.js" type="module"></script><script src="styles-es2015.js" type="module"></script><script src="styles-es5.js" nomodule defer></script><script src="scripts.js" defer></script><script src="vendor-es2015.js" type="module"></script><script src="vendor-es5.js" nomodule defer></script><script src="main-es2015.js" type="module"></script><script src="main-es5.js" nomodule defer></script></body>
+
+</html>

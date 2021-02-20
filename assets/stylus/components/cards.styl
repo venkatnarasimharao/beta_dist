@@ -1,0 +1,105 @@
+.vector-card
+    // padding 20px
+    margin-bottom 30px
+    box-shadow 0px 0px 4px rgba(0,0,0,0.22)
+    border-radius 5px
+    // border-right 1px solid #e8e8e8
+    &.last
+        border-right none    
+    &-img
+        max-width 200px
+        margin 0px 0px 10px
+        text-align left
+    &-title
+        font-size 18px
+        font-weight bold
+        margin-bottom 10px
+        color theme-dark
+        &.blue
+            color #2daae1
+        &.orange
+            color #f9d01b
+        &.green
+            color #22d9d0
+    &-details
+        color #466077
+        font-size 1rem
+        line-height 1.8rem
+    +mobile()
+        border-right none
+        border-bottom 1px solid #e8e8e8
+        padding 15px
+        .vector-card-img
+            text-align center
+            margin auto
+            margin-bottom 10px
+        .vector-card-title
+            text-align center
+        .vector-card-details
+            text-align center
+        &.last
+            border-bottom none
+
+.how-card
+    margin-bottom 50px
+    border-radius 5px
+    box-shadow 0px 0px 4px rgba(0,0,0,0.22)
+    background linear-gradient(45deg, #4f9af6, #0d65d1)
+    padding 15px
+    font-family 'Barlow', sans-serif
+    .how-it-works
+        .how-title
+            font-size 30px
+            color #fff
+            margin-bottom 20px
+            text-align center
+            text-transform uppercase
+            font-weight 500
+        .content-main
+            display flex
+            .how-img
+                height 140px
+                width @height
+                border-radius 50%
+                overflow hidden
+                margin-right 20px
+                img
+                    height 100%
+                    width 100%
+                    object-fit cover
+            .how-content
+                width calc(100% - 160px)
+                ul
+                    list-style none
+                    padding 0px
+                    margin 0px
+                    li
+                        margin-bottom 20px
+                        display flex
+                        align-items start
+                        .icon
+                            font-size 14px
+                            color white
+                            margin-right 8px
+                        .data
+                            font-size 14px
+                            color white
+
+.note-msg
+    padding 15px
+    background #f3f3f3
+    border-radius 5px
+    margin-bottom 20px
+    .note
+        font-size 15px
+        font-weight 700
+        margin-right 5px
+    .contact
+        font-size 12px
+        a
+            display inline-block
+            cursor pointer
+            margin-left 5px
+            font-weight bold
+            font-size 14px
+            color theme-dark

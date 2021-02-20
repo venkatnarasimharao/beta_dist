@@ -1,0 +1,253 @@
+body
+    overflow-x hidden
+
+.pagge-wrapper
+    .main-content
+        background #eaf4fc
+        position relative
+        height 100%
+        width 100%
+
+.category-section
+    margin-top -70px
+
+.auto-container
+    max-width 1000px
+    margin auto
+
+.row-reverse
+    flex-direction row-reverse
+
+#page
+    +pad()
+        transition all 0.3s ease
+        .show-mobile-nav &
+            transform translateX(-280px)
+
+.partner-block
+    height 460px
+    width auto
+    background-image url('/assets/images/partner1.png')
+    background-repeat no-repeat
+    background-position center center
+    background-size auto
+    position relative
+    .partner-inner
+        position absolute
+        right 0
+        top 20%
+        width 45%
+        .partner-text
+            font-size 40px    
+            font-weight bold
+            margin-bottom 20px
+            color #2c84f1
+            text-transform uppercase
+        .partner-btn
+            .btn
+                background #2c84f1 none repeat scroll 0 0
+                border-radius 5px
+                color #ffffff
+                display block
+                float none
+                font-family "lato"
+                font-size 16px
+                // margin 0 auto
+                padding-bottom 13px
+                padding-top 13px
+                text-align center
+                text-transform uppercase
+                width 20%
+
+.partner-icon-section
+    background white
+    margin-bottom 30px
+    .wrap
+        width 100%
+        display flex
+        justify-content space-between
+        margin-bottom 60px
+        margin-top 40px
+        &:last-child
+            margin-bottom 0px
+        .partner-icon
+            width 33.33%
+            .icon
+                height 120px
+                width @height
+                line-height @height
+                margin auto
+                text-align center
+                font-size 48px
+                background #eeeeee
+                color theme-dark
+                margin-bottom 8px
+                border-radius 50%
+            .title
+                color theme-dark
+                font-size 18px
+                font-weight 600
+                margin-bottom 5px
+                text-align center
+            .descp
+                font-size 16px
+                color #666666
+                line-height 22px
+                text-align center
+                width 80%
+                margin auto
+        &.short
+            margin-bottom 40px
+            .partner-icon
+                width 50%
+        &.medium
+            .partner-icon
+                width 25%
+
+.partner-bottom
+    .partner-title
+        text-align center
+        font-size 25px
+        margin-bottom 30px
+        color #666666
+    .partner-btn
+        margin-bottom 30px
+        .btn
+            background #2c84f1 none repeat scroll 0 0
+            border-radius 5px
+            color #ffffff
+            display block
+            float none
+            font-family "lato"
+            font-size 16px
+            margin 0 auto
+            padding-bottom 13px
+            padding-top 13px
+            text-transform uppercase
+            width 20%
+   .partner-email
+       font-size 16px
+       text-align center
+       color #666666
+       a
+        color theme-dark
+
+a
+    &:focus
+        outline none
+
+button
+    &:focus
+        outline none
+
+
+.no-data
+    display flex
+    align-items center
+    justify-content center
+    .no-data-info
+        text-align center
+        .no-data-icon
+            height 80px
+            width @height
+            line-height @height
+            border-radius 50%
+            margin auto
+            background gray-light
+            text-align center
+            font-size 40px
+            color #b8b8b8
+            margin-bottom 5px
+        .no-data-text
+            font-size 14px
+            color gray
+            font-weight 600
+
+.refer-inner
+    margin-bottom 40px
+    .refer-img
+        height 400px
+        width 100%
+        display block
+        img
+            height 100%
+            width 100%
+            object-fit contain
+    .refer-text
+        font-size 36px
+        padding 35px 110px 20px
+        font-weight 300
+        text-align center
+        b
+            font-weight bold
+    .refer-sub-text
+        font-size 18px
+        color #5e6074
+        margin 0 100px 50px 100px
+        font-weight 300
+        text-align center
+    .refer-email
+        text-align center
+        .icon-mail
+            font-size 80px
+            color #ff4f6f
+            line-height normal
+            margin-bottom 10px
+        .icon-title
+            font-size 22px
+            text-transform uppercase
+            font-weight bold
+            margin-bottom 20px
+        .coupon-select
+            width 50%
+            margin auto
+            .input-group
+                input
+                    height 50px
+                    &:focus
+                        outline none
+                        box-shadow none
+                .input-group-append
+                    .btn
+                        font-size 18px
+                        text-transform uppercase
+                        padding-right 20px
+                        font-weight bold
+.ScrollTop
+    position fixed
+    bottom 60px
+    right 15px
+    cursor pointer
+    background theme
+    color #ffffff
+    width 43px
+    height 43px
+    border-radius 25px
+    display none
+    z-index 8
+    overflow hidden
+    transform translate3d(0,0,0)
+    padding initial
+    line-height initial
+    text-align center
+
+
+for i in range(1px, 10000px, 1)
+  .mt-{i}
+    margin-top i !important
+  .mb-{i}
+    margin-bottom i !important
+  .ml-{i}
+    margin-left i !important
+  .mr-{i}
+    margin-right i !important
+  .padding-{i}
+    padding i !important
+  .pt-{i}
+    padding-top i !important
+  .pb-{i}
+    padding-bottom i !important
+  .height-{i}
+    height i
+  .width-{i}
+    width i !important
