@@ -6013,8 +6013,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     "./node_modules/tslib/tslib.es6.js");
 
     var serverIP = {
-      apiUrl: 'http://localhost:3333/api',
-      imgUrl: 'http://localhost:3333/',
+      apiUrl: 'http://52.15.209.9:3333/api',
+      imgUrl: 'http://52.15.209.9:3333/',
       SECURITY_KEY: 'BaCaTaSTore#$.@JA'
     };
     /***/
