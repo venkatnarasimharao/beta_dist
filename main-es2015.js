@@ -1504,7 +1504,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                     providers: [
                         {
                             id: angularx_social_login__WEBPACK_IMPORTED_MODULE_20__["GoogleLoginProvider"].PROVIDER_ID,
-                            provider: new angularx_social_login__WEBPACK_IMPORTED_MODULE_20__["GoogleLoginProvider"]('688579597176-u14fcsmgd0abmsfi46ukrqgib762k91s.apps.googleusercontent.com')
+                            provider: new angularx_social_login__WEBPACK_IMPORTED_MODULE_20__["GoogleLoginProvider"]('216581040310-n94ej20k6m5k5fhe585s1ldpb3fbp7ll.apps.googleusercontent.com')
                         },
                         {
                             id: angularx_social_login__WEBPACK_IMPORTED_MODULE_20__["FacebookLoginProvider"].PROVIDER_ID,
@@ -2786,6 +2786,9 @@ let LoginComponent = class LoginComponent {
         this.location = location;
         // 688579597176-u14fcsmgd0abmsfi46ukrqgib762k91s.apps.googleusercontent.com  ---> OAuth Client ID
         // hGmPx076BtcNdHA9ZgQVLrdo  ---> OAuth Client Secret
+        // latest
+        // 216581040310-n94ej20k6m5k5fhe585s1ldpb3fbp7ll.apps.googleusercontent.com
+        // Tb_HhEUYoYj5mMgf4zArqE0B
         this.showType = 'signup';
         this.username = '';
         this.password = '';
