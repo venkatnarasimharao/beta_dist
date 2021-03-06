@@ -132,6 +132,8 @@
                         border none
                 .owl-prev
                     margin-right 10px
+                +mobile()
+                    top -60px !important
 
 .featured-section
     margin-top 30px
@@ -3934,6 +3936,11 @@ a
     margin-top -40px
     margin-bottom 30px
     box-shadow 0 1px 2px 0 rgba(0, 0, 0, .2)
+    +mobile()
+        margin-top auto
+        position relative
+        margin-bottom 0px
+        top -20px
 
 .fl-links
     float left
@@ -6065,6 +6072,8 @@ a
                         border-bottom 1px solid #e9ecef
                         i
                             margin-right 10px
+                        &:active
+                            background #f8f9fa
             .price
                 font-size 12px
                 color #333
@@ -6095,7 +6104,7 @@ a
             img
                 height 100%
                 width 100%
-                object-fit cover
+                object-fit contain
 
 .store-heading
     display flex
@@ -6320,6 +6329,12 @@ a
             text-decoration underline
         &:focus
             outline none
+    +mobile()
+        .section-title
+            font-size 18px
+        .section-options
+            font-size 10px
+
 
 .featured-product
     #product-tabs-slider
@@ -6593,3 +6608,9 @@ a
 
 .custom-pointer
     cursor pointer !important
+
+
+.validation-tite
+    color white
+    font-size 40px
+    font-weight 600

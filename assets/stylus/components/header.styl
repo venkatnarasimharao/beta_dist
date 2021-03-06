@@ -9,10 +9,122 @@ header
                     align-items center
                     flex-direction row-reverse
                     justify-content space-between
+            +mobile()
+                display none
         .main-header
             padding 0px 0px 0px 0px
             height 180px
             width 100%
+            .classy-navbar-toggler
+                border none
+                background-color transparent
+                cursor pointer
+                display none
+                .navbarToggler
+                    display inline-block
+                    cursor pointer
+                    span
+                        position relative
+                        background-color white
+                        border-radius 3px
+                        display block
+                        height 3px
+                        margin-top 5px
+                        padding 0
+                        -webkit-transition-duration .3s
+                        transition-duration .3s
+                        width 30px
+                        cursor pointer
+                +mobile()
+                    display block
+            .classy-menu
+                display none
+                .classynav
+                    background white
+                    position fixed
+                    z-index 10
+                    width 80%
+                    left 0px
+                    top 0px
+                    height 100%
+                    background white
+                    .classynav-header
+                        background #f3ebeb
+                        padding 8px
+                        .user-info
+                            display flex
+                            align-items center
+                            padding 0px
+                            margin-bottom 10px
+                            .user-img
+                                width 50px
+                                height @width
+                                margin-right 10px
+                            .user-content
+                                width calc(100% - 60px)
+                                .name
+                                    font-size 14px
+                                    font-weight 500
+                                    line-height normal
+                                    margin-bottom 0px
+                                .email
+                                    font-size 12px
+                                    color gray
+                                    line-height normal
+                        .user-amount-info
+                            line-height normal
+                            text-align left
+                            .amount-label
+                                font-size 12px
+                                margin-bottom 5px
+                                line-height normal
+                                color gray
+                            .amount-info
+                                font-size 14px
+                                font-weight 600
+                                color green
+                                i
+                                    margin-right 5px
+                    .classynav-body
+                        padding 0px
+                        background white
+                        .classynav-inner
+                            ul
+                                list-style none
+                                padding 0px
+                                margin 0px
+                                li
+                                    padding 15px 10px
+                                    line-height normal
+                                    text-align left
+                                    margin-bottom 0px
+                                    border-bottom 1px solid #ddd
+                                    a
+                                        color #7f7f7f
+                                        font-size 14px
+                                        font-weight 600
+                                        i
+                                            width 30px
+                                        &:hover
+                                            text-decoration none
+                                    &:last-child
+                                        margin-bottom 0px
+                .classycloseIcon
+                    position absolute
+                    top 2px
+                    right 20px
+                    z-index 12
+                    display block
+                    .cross-wrap
+                        width 40px
+                        height 40px
+                        text-align center
+                        cursor pointer
+                        position relative
+                        font-size 30px
+                        color white
+                &.show-side
+                    display block
             .top-search-holder
                 .contact-row
                     .icon
@@ -104,6 +216,10 @@ header
                         object-fit contain
                         height 100%
                         width 100%
+                +mobile()
+                    display flex
+                    align-items center
+                    justify-content space-between
             .navbar-default
                 padding 0px
                 margin-top 8px
@@ -120,3 +236,5 @@ header
                                     background #fff
                                     border-radius 999px
                                     color #ee4054
+                +mobile()
+                    display none

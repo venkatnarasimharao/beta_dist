@@ -103,3 +103,50 @@
             font-weight bold
             font-size 14px
             color theme-dark
+.reedemed-card
+    border 1px solid #ddd
+    margin-bottom 1.5rem
+    border-radius 5px
+    padding 15px 25px
+    display flex
+    justify-content space-between
+    align-items center
+    .left
+        .count
+            font-weight bold
+            font-size 30px
+            line-height normal
+            color theme-dark
+            margin-bottom 5px
+        .text
+            font-size 14px
+            text-transform uppercase
+            font-weight 600
+    .right
+        .icon
+            font-size 45px
+            color gray
+    &.redeemed
+        .left
+            .count
+                color danger
+
+.store-info
+    margin-top 10px
+    .store-name
+        margin-bottom 10px
+        label
+            color gray
+            font-weight 600
+            margin-bottom 5px
+            font-size 14px
+        .name
+            font-size 16px
+            font-weight bold
+            color theme-dark
+        .decp
+            font-size 14px
+            font-weight 600
+            margin-bottom 10px
+        &:last-child
+            margin-bottom 0px

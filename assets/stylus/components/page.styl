@@ -1,12 +1,17 @@
 body
     overflow-x hidden
 
-.pagge-wrapper
-    .main-content
-        background #eaf4fc
-        position relative
-        height 100%
-        width 100%
+.page-wrapper
+    position relative
+    &.login-slide
+        transition 0.3s all ease
+        &:before
+            content ''
+            position absolute
+            height 100%
+            width 100%
+            background #111111d4
+            z-index 10
 
 .category-section
     margin-top -70px
@@ -176,6 +181,7 @@ button
     .refer-text
         font-size 36px
         padding 35px 110px 20px
+        padding-top 0px
         font-weight 300
         text-align center
         b
@@ -199,7 +205,7 @@ button
             font-weight bold
             margin-bottom 20px
         .coupon-select
-            width 50%
+            width 80%
             margin auto
             .input-group
                 input
