@@ -1,17 +1,18 @@
 body
     overflow-x hidden
-
+    &.login-slide
+        overflow hidden
+        transition 0.3s all ease
+        .page-wrapper
+            &:before
+                content ''
+                position absolute
+                height 100%
+                width 100%
+                background #111111d4
+                z-index 10
 .page-wrapper
     position relative
-    &.login-slide
-        transition 0.3s all ease
-        &:before
-            content ''
-            position absolute
-            height 100%
-            width 100%
-            background #111111d4
-            z-index 10
 
 .category-section
     margin-top -70px
@@ -205,7 +206,7 @@ button
             font-weight bold
             margin-bottom 20px
         .coupon-select
-            width 80%
+            width 50%
             margin auto
             .input-group
                 input
@@ -257,3 +258,32 @@ for i in range(1px, 10000px, 1)
     height i
   .width-{i}
     width i !important
+
+
+.back-to-top
+    z-index 99
+    position fixed
+    bottom 30px
+    right 30px
+    width 33px
+    height 33px
+    line-height 33px
+    display none
+    color #3c4858
+    background-color #ced4da
+    -webkit-transition all 0.5s ease
+    transition all 0.5s ease
+    -webkit-box-shadow 0 0 3px rgba(60, 72, 88, 0.15)
+    box-shadow 0 0 3px rgba(60, 72, 88, 0.15)
+    i
+        font-size 16px
+        -webkit-transition all 0.5s ease
+        transition all 0.5s ease
+    &:hover
+        background-color #2f55d4
+        color #ffffff
+        -webkit-transform rotate(45deg)
+        transform rotate(45deg)
+        i
+            -webkit-transform rotate(-45deg)
+            transform rotate(-45deg)

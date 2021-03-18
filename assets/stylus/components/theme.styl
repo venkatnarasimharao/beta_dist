@@ -103,6 +103,7 @@
                                             a
                                                 width 70%
                                                 height 60px
+                                                line-height 60px
                                                 display block
                                                 position relative
                                                 margin auto
@@ -611,6 +612,7 @@
         padding-top 25px
     .blog-post
         margin-right 25px
+        cursor pointer
         img
             width 100%
     #product-tabs-slider
@@ -4907,6 +4909,8 @@ a
     .products
         .image
             a
+                height 100px
+                line-height normal
                 width 50%
                 display block
                 position relative
@@ -6504,6 +6508,8 @@ a
                             cursor pointer
                             &:hover
                                 text-decoration underline
+                    +mobile()
+                        width auto
                 .coupon-more
                     padding 15px
                     background #f3f5f3
@@ -6513,6 +6519,8 @@ a
                     border-radius 6px
                     margin-bottom 30px
                     line-height 2
+                    +mobile()
+                        display none
                 .coupon-get
                     display flex
                     align-items center
@@ -6589,6 +6597,19 @@ a
                                 cursor pointer
                                 &:hover
                                     text-decoration none
+                    +mobile()
+                        .coupon-select
+                            .coupon-input
+                                .coupon-code
+                                    max-width 150px
+                                    min-width 120px
+                                    height 40px
+                                    line-height 40px
+                            .coupon-copy
+                                a
+                                    line-height 30px
+                                    height 30px
+                                    padding 11px
                 .coupon-visit
                     display flex
                     align-items center

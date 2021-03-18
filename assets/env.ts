@@ -4,5 +4,6 @@ export const serverIP: any = {
     // apiUrl: 'http://localhost:3333/api',
     // PRODUCTION: false,
     imgUrl: 'http://52.15.209.9:3333/',
+    // imgUrl: 'http://localhost:3333/api',
     SECURITY_KEY : 'BaCaTaSTore#$.@JA'
 }
